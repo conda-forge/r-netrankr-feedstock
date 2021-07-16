@@ -1,4 +1,4 @@
-{% set version = "0.3.0" %}
+{% set version = "1.0.0" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -11,7 +11,7 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/netrankr_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/netrankr/netrankr_{{ version }}.tar.gz
-  sha256: e9866289a4068282379c7669d4dc2201b9640a1e23bfd0568055647d49db3e6a
+  sha256: 5f87ff6f92a1f0a7e014f0769b32d944c03f76c47f4c92b55a9ebef53fb29c96
 
 build:
   merge_build_host: true  # [win]
