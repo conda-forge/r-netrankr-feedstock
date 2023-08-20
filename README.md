@@ -3,6 +3,7 @@ About r-netrankr-feedstock
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/r-netrankr-feedstock/blob/main/LICENSE.txt)
 
+
 About r-netrankr
 ----------------
 
@@ -11,6 +12,7 @@ Home: https://schochastics.github.io/netrankr
 Package license: MIT
 
 Summary: Implements methods for centrality related analyses of networks.  While the package includes the possibility to build more than 20 indices,  its main focus lies on index-free assessment of centrality via partial  rankings obtained by neighborhood-inclusion or positional dominance. These  partial rankings can be analyzed with different methods, including  probabilistic methods like computing expected node ranks and relative  rank probabilities (how likely is it that a node is more central than another?). The methodology is described in depth in the vignettes and in Schoch (2018) <doi:10.1016/j.socnet.2017.12.003>.
+
 About r-netrankr
 ----------------
 
