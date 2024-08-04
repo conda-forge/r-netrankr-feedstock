@@ -1,6 +1,5 @@
 {% set version = "1.2.3" %}
 {% set posix = 'm2-' if win else '' %}
-{% set native = 'm2w64-' if win else '' %}
 
 package:
   name: r-netrankr
@@ -14,8 +13,7 @@ source:
   sha256: 9bd4f561b0890272cc813b0a510063f13781a19ad88369884b4c0c0be46bbb2a
 
 build:
-  merge_build_host: true  # [win]
-  number: 0
+  number: 1
   rpaths:
     - lib/R/lib/
     - lib/
@@ -23,8 +21,10 @@ build:
 requirements:
   build:
     - {{ compiler('c') }}        # [not win]
+    - {{ stdlib("c") }}          # [not win]
     - {{ compiler('cxx') }}      # [not win]
     - {{ compiler('m2w64_c') }}        # [win]
+    - {{ stdlib("m2w64_c") }}          # [win]
     - {{ compiler('m2w64_cxx') }}        # [win]
     - {{ posix }}filesystem        # [win]
     - {{ posix }}make
@@ -38,7 +38,6 @@ requirements:
     - r-igraph >=1.0.1
   run:
     - r-base
-    - {{ native }}gcc-libs         # [win]
     - r-rcpp >=0.12.8
     - r-rcpparmadillo
     - r-igraph >=1.0.1
