@@ -1,4 +1,4 @@
-{% set version = "1.2.4" %}
+{% set version = "2.0.0" %}
 {% set posix = 'm2-' if win else '' %}
 
 package:
@@ -10,10 +10,10 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/netrankr_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/netrankr/netrankr_{{ version }}.tar.gz
-  sha256: a1ed687cd497627c7f2be665e135cbf7fb18272aecedbc80b364113bc8112b03
+  sha256: ba0c23cc856985ac1a771ef13e8589799661196362cbb8cce694c3fde1d679ae
 
 build:
-  number: 1
+  number: 0
   rpaths:
     - lib/R/lib/
     - lib/
@@ -50,8 +50,8 @@ test:
 about:
   home: https://schochastics.github.io/netrankr
   license: MIT
-  summary: Implements methods for centrality related analyses of networks.  While the package includes the possibility to build more than 20 indices,  its main focus lies on index-free assessment of centrality via partial  rankings obtained by neighborhood-inclusion or positional dominance. These  partial rankings can be
-    analyzed with different methods, including  probabilistic methods like computing expected node ranks and relative  rank probabilities (how likely is it that a node is more central than another?). The methodology is described in depth in the vignettes and in Schoch (2018) <doi:10.1016/j.socnet.2017.12.003>.
+  summary: Implements methods for centrality related analyses of networks.  While the package includes the possibility to build more than 20 indices,  its main focus lies on index-free assessment of centrality via partial  rankings obtained by neighborhood-inclusion or positional dominance. These  partial rankings can 
+    be analyzed with different methods, including  probabilistic methods like computing expected node ranks and relative  rank probabilities (how likely is it that a node is more central than another?). The methodology is described in depth in the vignettes and in Schoch (2018) <doi:10.1016/j.socnet.2017.12.003>.
   license_family: MIT
   license_file:
     - {{ environ["PREFIX"] }}/lib/R/share/licenses/MIT
